@@ -19,7 +19,7 @@ The primary objectives include:
 The repository includes datasets comprising customer transaction records with various attributes.
 
 ## Code and Scripts
-All scripts and code used in the process of data analysis and decision tree creation are provided.
+All scripts and code used in the process of data analysis.
 
 ## Documentation for Each Tool
 - **SAS e-Miner:** Provides a comparative analysis of decision tree, Bagging (Random Forest), and Boosting methods, highlighting their individual contributions to the study of customer behavior.
