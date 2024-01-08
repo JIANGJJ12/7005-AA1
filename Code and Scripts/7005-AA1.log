@@ -1,0 +1,119 @@
+1                                                          The SAS System                           Monday,  8 January 2024 06:48:00
+
+
+
+
+You are running SAS 9. Some SAS 8 files will be automatically converted 
+by the V9 engine; others are incompatible.  Please see 
+http://support.sas.com/rnd/migration/planning/platform/64bit.html
+
+PROC MIGRATE will preserve current SAS file attributes and is 
+recommended for converting all your SAS libraries from any 
+SAS 8 release to SAS 9.  For details and examples, please see
+http://support.sas.com/rnd/migration/index.html
+
+
+This message is contained in the SAS news file, and is presented upon
+initialization.  Edit the file "news" in the "misc/base" directory to
+display site-specific news and information in the program log.
+The command line option "-nonews" will prevent this display.
+
+
+
+
+1          %let SYSCC=0;
+2          %let SYSRC=0;
+3          %let EMEXCEPTIONSTRING=;
+4          %let SYSMSG=;
+5          %GLOBAL PRODNUMS;data products;input prodnum $ 1-10 desc $ 12-30;status = sysprod(prodnum);if (status = 1) then do;call
+5        ! symput( 'PRODNUMS', cat( symget( 'PRODNUMS'), ',', prodnum ) );end;datalines;
+19         ;run;%put &PRODNUMS;
+,PRODNUM075,PRODNUM102,PRODNUM106,PRODNUM107,PRODNUM677
+2                                                          The SAS System                           Monday,  8 January 2024 06:48:00
+
+20         %let SYSCC=0;
+21         %let SYSRC=0;
+22         %let EMEXCEPTIONSTRING=;
+23         %let SYSMSG=;
+24         %GLOBAL PRODNUMS;data products;input prodnum $ 1-10 desc $ 12-30;status = sysprod(prodnum);if (status = 1) then do;call
+24       ! symput( 'PRODNUMS', cat( symget( 'PRODNUMS'), ',', prodnum ) );end;datalines;
+38         ;run;%put &PRODNUMS;
+,PRODNUM075,PRODNUM102,PRODNUM106,PRODNUM107,PRODNUM677,PRODNUM075,PRODNUM102,PRODNUM106,PRODNUM107,PRODNUM677
+3                                                          The SAS System                           Monday,  8 January 2024 06:48:00
+
+39         %let SYSCC=0;
+40         %let SYSRC=0;
+41         %let EMEXCEPTIONSTRING=;
+42         %let SYSMSG=;
+43         filename _emproj catalog 'sashelp.emwip.em_project.source';
+44         %inc _emproj;
+182        filename _emproj;
+183        %em_project(action=getServerInfo,
+184        outfile=projectServerInfo.xml
+185        );
+197        filename _wipxml
+197      ! '/saswork/SAS_work4AC50000F721_odaws01-apse1-2.oda.sas.com/SAS_work92650000F721_odaws01-apse1-2.oda.sas.com/projectServer
+197      ! Info.xml' encoding="UTF-8" NOBOM;
+4                                                          The SAS System                           Monday,  8 January 2024 06:48:00
+
+WARNING: End of file.
+WARNING: End of file.
+198        filename _emenv catalog 'sashelp.emwip.em_loadmacros.source';
+199        %inc _emenv;
+1285       filename _emenv;
+1286       %let WIP_PROJPATH=%nrstr(~);
+1287       %let WIP_PROJNAME=%nrstr(7005-lecture);
+1288       proc display c=sashelp.emwip.em_init.scl; run;
+7841       %let SYSCC=0;
+7842       *------------------------------------------------------------*;
+7843       * Submitting STARTUP code;
+7844       *------------------------------------------------------------*;
+7845       libname semma "/home/u63467097/7005-lecture";
+7846       run;
+7862       options VBUFSIZE= 64M;
+5 The SAS System                                                                                                                                                                                                                Monday,  8 January 2024 06:48:0
+0
+
+7864       %let SYSCC=0;
+7865       %let SYSRC=0;
+7866       %let EMEXCEPTIONSTRING=;
+7867       %let SYSMSG=;
+7868       %em_project(action=ASSIGNLIBNAMES, projpath=%nrstr(~), projname=%nrstr(7005-lecture));
+7880       libname EMWS4 %nrstr("~/7005-lecture/Workspaces/EMWS4") access=READONLY;
+11 The SAS System                                                                                                                                                                                                               Monday,  8 January 2024 06:48:0
+0
+
+23255      filename _emenv catalog 'sashelp.emwip.em_loadmacros.source';
+23256      %inc _emenv;
+24342      filename _emenv;
+24343      %let WIP_PROJPATH=%nrstr(~);
+24344      %let WIP_PROJNAME=%nrstr(7005-lecture);
+24345      proc display c=sashelp.emwip.em_init.scl; run;
+30898      %let SYSCC=0;
+30899      *------------------------------------------------------------*;
+30900      * Submitting STARTUP code;
+30901      *------------------------------------------------------------*;
+30902      libname semma "/home/u63467097/7005-lecture";
+30903      run;
+30919      options VBUFSIZE= 64M;
+12 The SAS System                                                                                                                                                                                                               Monday,  8 January 2024 06:48:0
+0
+
+30921      %let SYSCC=0;
+30922      %let SYSRC=0;
+30923      %let EMEXCEPTIONSTRING=;
+30924      %let SYSMSG=;
+30925      %em_project(action=ASSIGNLIBNAMES, projpath=%nrstr(~), projname=%nrstr(7005-lecture));
+30937      libname EMWS4 %nrstr("~/7005-lecture/Workspaces/EMWS4") access=READONLY;
+13 The SAS System                                                                                                                                                                                                               Monday,  8 January 2024 06:48:0
+0
+
+30938      %let SYSCC=0;
+30939      %let SYSRC=0;
+30940      %let EMEXCEPTIONSTRING=;
+30941      %let SYSMSG=;
+30942      filename _x catalog 'sashelp.emutil.em_update_vtable_cache.source';
+30943      %inc _x;
+31002      ;
+31003      filename _x;
+31004      %em_update_vtable_cache(library=AAEM61,details=N);
